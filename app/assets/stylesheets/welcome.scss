@@ -102,3 +102,205 @@ ul li {
 		transform:translateY(-25%);
 		}
 	}
+
+#ProfilePagestyle{
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  margin: 0;
+  
+}
+
+
+ .button {
+    position: relative;
+    right: 10px;
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+
+#ProfilePage {
+    /* Move it off the top of the page, then centre it horizontally */
+    position: absolute;
+    left: 290px;
+    margin: 250px auto;
+    width: 635px;
+    padding: 30px 30px;
+    color: white;
+    text-shadow: 0 0 10px black;
+    background-color: rgba(255,255,255, 0.5);
+    
+
+}
+
+
+#LeftCol
+{
+    /* Move it to the left */
+    float: left;
+
+    width: 200px;
+    text-align: center;
+
+    /* Move it away from the content */
+    margin-right: 20px;
+
+}
+
+#Photo
+{
+    background-image: url("/images/profile.png");
+    background-size: cover;
+    /* Width and height of photo container */
+    width: 200px;
+    height: 200px;
+
+}
+
+#PhotoOptions
+{
+    text-align: center;
+    width: 200px;
+
+}
+
+#Info
+{
+    width: 400px;
+    text-align: left;
+    font-size: 17px;
+    /* Move it to the right */
+    float: right;
+    font-weight: bold;
+}
+
+
+#Info strong
+{
+    /* Give it a width */
+    display: inline-block;
+    width: 100px;
+
+}
+
+#Info span
+{
+    /* Give it a width */
+    display: inline-block;
+    width: 250px;
+    color: #350866;
+    text-shadow: 0 0 10px white;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px white;
+
+
+}
+
+// Udate Info Page
+
+.users_update {
+	
+	display: inline-block;
+	width: 100%;
+	min-height: 750px;
+	position: relative;
+
+}
+
+ .updateform {
+ 	position: absolute;
+	top: 100px;
+	left: 420px;
+
+ }
+ .updateform h1 {
+ 	text-transform: uppercase;
+ 	font-size: 20px;
+ 	margin-left: 65px;
+ 	text-shadow:
+      2px 2px 1px #363636;
+ }
+
+.updateform label {
+text-shadow:
+      2px 2px 1px #363636;
+
+}
+
+.updateform input {
+  border: 1px solid #bbb;
+  width: 25%;
+  height: 20px;
+  margin-bottom: 15px;
+  outline: none;
+  text-align:center;
+}
+
+
+.updateform select {
+	border: 1px solid #bbb;
+	margin-bottom: 15px;
+	outline:none;
+}
+
+	
+#btn_update {
+  display: inline-block;
+  color: white;
+  font-weight: 600;
+  width: 90px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 60px;
+  text-transform: uppercase;
+  text-decoration: none;
+  user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+  background-color: grey;
+
+} 
+#btn_update:hover { 
+	background: rgba(255,255,255,.2); 
+	color:white;
+}
+
+
+	#uplname, #regfname, #regemail, #regpas, #regun, #regdob {
+	width: 220px;
+	height: 20px;
+	outline: none;
+	text-align: center;
+	border: 1px solid #bbb;      
+	text-transform:uppercase;
+}
+
+#regemail {
+	margin-left: 25px;
+}
+
+#regun {
+	margin-left: -2px;
+}
+
+
+#regpas {
+	margin-right: 0px;
+}
+
+#regdob {
+	margin-left: 35px;
+}
