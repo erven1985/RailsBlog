@@ -1,0 +1,21 @@
+
+<div class="users_update">
+  <div class="updateform">
+  <h1>Update Form</h1>
+<%= form_for (@user) do |f| %>
+  <%= f.label :firstname %>
+  <%= f.text_field :firstname, placeholder:"firstname", id: "regfname" %> <br>
+  <%= f.label :lastname %>
+  <%= f.text_field :lastname, placeholder:"lastname", id: "reglname" %> <br>
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder:"username", id: "regun" %> <br>
+ <%= f.label :DoB %>
+  <%= f.text_field :dob, placeholder:"DoB", id: "regdob" %> <br>
+
+  <%= f.label :Gender %>
+  <%= select_tag(:gender, options_for_select([['male', 'male'], ['female', 'female']])) %><br>
+  <%= f.submit "Update",  id: "btn_update" %>
+<% end %>
+
+	</div>
+</div>
