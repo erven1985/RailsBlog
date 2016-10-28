@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-  get '/' => 'welcome#index'
-  get 'users/profile' => 'welcome#profile'
-  get 'users/update' => 'welcome#update'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-get 'welcome/index', as: 'user_root'
+  devise_for :users
+  get '/' 									 => 'welcome#index'
+  get 'welcome/index', as: 'user_root'
+  get 'users/profile' 			 => 'welcome#profile'
+  get 'users/update'				 => 'welcome#update'
+	
+
+
+
+	get '/posts'           => 'posts#show'
 
 end

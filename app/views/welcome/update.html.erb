@@ -1,21 +1,23 @@
+<h2>Update</h2>
 
-<div class="users_update">
-  <div class="updateform">
-  <h1>Update Form</h1>
-<%= form_for (@user) do |f| %>
-  <%= f.label :firstname %>
-  <%= f.text_field :firstname, placeholder:"firstname", id: "upfname" %> <br>
-  <%= f.label :lastname %>
-  <%= f.text_field :lastname, placeholder:"lastname", id: "uplname" %> <br>
-  <%= f.label :username %>
-  <%= f.text_field :username, placeholder:"username", id: "upun" %> <br>
- <%= f.label :DoB %>
-  <%= f.text_field :dob, placeholder:"DoB", id: "updob" %> <br>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
 
-  <%= f.label :Gender %>
-  <%= select_tag(:gender, options_for_select([['male', 'male'], ['female', 'female']])) %><br>
-  <%= f.submit "Update",  id: "btn_update" %>
-<% end %>
-
+  <div class="field">
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname, autofocus: true %><br />
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname, autofocus: true %><br />
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true %><br />
+    <%= f.label :dob %><br />
+    <%= f.text_field :dob, autofocus: true %><br />
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender, autofocus: true %><br />
   </div>
-</div>
+
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
