@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   devise_for :users
   get '/' 									 => 'welcome#index'
   get 'welcome/index', as: 'user_root'
+  get '/users'           		 => 'welcome#all'
   get 'users/profile' 			 => 'welcome#profile'
   get 'users/update'				 => 'welcome#update'
-	
 
 
 
 	get '/posts'           => 'posts#show'
+	post '/posts'          => 'posts#new'
 
 end

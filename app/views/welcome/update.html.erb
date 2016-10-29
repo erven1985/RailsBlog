@@ -1,23 +1,21 @@
-<h2>Update</h2>
+<h2>Update Personal</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<%= form_for @user do |f| %>
 
   <div class="field">
     <%= f.label :firstname %><br />
-    <%= f.text_field :firstname, autofocus: true %><br />
+    <%= f.text_field :firstname, autofocus: true, placeholder: current_user.firstname %><br />
     <%= f.label :lastname %><br />
-    <%= f.text_field :lastname, autofocus: true %><br />
+    <%= f.text_field :lastname, autofocus: true, placeholder: current_user.lastname %><br />
     <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %><br />
+    <%= f.text_field :username, autofocus: true, placeholder: current_user.username %><br />
     <%= f.label :dob %><br />
-    <%= f.text_field :dob, autofocus: true %><br />
+    <%= f.text_field :dob, autofocus: true, placeholder: current_user.dob %><br />
     <%= f.label :gender %><br />
-    <%= f.text_field :gender, autofocus: true %><br />
+    <%= f.text_field :gender, autofocus: true, placeholder: current_user.gender %><br />
   </div>
 
-
-  <div class="actions">
-    <%= f.submit "Update" %>
+  <div class="update">
+    <%= f.submit "Update"%>
   </div>
 <% end %>

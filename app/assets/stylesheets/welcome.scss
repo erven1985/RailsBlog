@@ -57,7 +57,7 @@ p {
 	float:left;  
 	margin:0;}
 
-ul {  
+#home_name {  
 	margin-top:0;  
 	padding-left:110px;  
 	text-align:left;  
@@ -70,7 +70,7 @@ ul {
 	animation-iteration-count: infinite;
 }
 
-ul li {  
+#home_name li {  
 	line-height:40px;  
 	margin:0;}
 	@-webkit-keyframes opacity 
@@ -303,4 +303,14 @@ text-shadow:
 
 #regdob {
 	margin-left: 35px;
+}
+
+// Users Page 
+
+.users {
+
+margin-top: 300px;
+color: white;
+
+
 }
