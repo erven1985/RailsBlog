@@ -167,6 +167,15 @@ p {
 
 }
 
+
+#Photo2
+{
+    background-image: url("/images/profile2.png");
+    background-size: cover;
+    /* Width and height of photo container */
+    width: 200px;
+    height: 200px;
+}
 #PhotoOptions
 {
     text-align: center;
@@ -313,4 +322,8 @@ margin-top: 300px;
 color: white;
 
 
+}
+
+.link_user {
+	color: white;
 }

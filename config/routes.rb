@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/users'           		 => 'welcome#all'
   get 'users/profile' 			 => 'welcome#profile'
   get 'users/update'				 => 'welcome#update'
-
+  get '/users/profile/:id'   => 'welcome#show'
 
 
 	get '/posts'           => 'posts#show'

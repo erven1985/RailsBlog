@@ -14,8 +14,9 @@
 <div class="posts">
 <ul>
 	<% @posts.each do |post| %>
-	<li><%= post.content %> <%= post.user.username %><button class="button30" id='<%= post.id%>'></button></li><br />
-	<span>comments: <%=post.comments.count %></span>
+	<span><%=post.topic %></span>
+	<li><%= post.content %> <%= post.user.username %><button class="button30" id='<%= post.id%>' onclick='location.href= "/comments/new/<%= post.id%>"'></button></li><br />
+	<span>comments: <%=post.comments.count %></span><br />
 	<% end %>
 </ul>	
 </div>

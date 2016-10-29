@@ -1,8 +1,9 @@
 
 <div class="users">
+<h1>All Users</h1>
 <ol>
 	<% @users.each do |user| %>
-	<li><%= user.username %> <%= user.posts.count %></li><br />
+	<li><a class="link_user" href="/users/profile/<%= user.id%>"><%= user.username %></a></li><br />
 	<% end %>
 </ol>	
 </div>

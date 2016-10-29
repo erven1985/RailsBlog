@@ -1,0 +1,51 @@
+<div id='ProfilePagestyle'>
+<div id="ProfilePage">
+    <div id="LeftCol">
+        <div id="Photo2"></div>
+        <div id="ProfileOptions"> 
+    	<%=@user_by_id.username%>
+        </div>
+    </div>
+
+    <div id="Info">
+        <p> 
+            <strong>User Name:</strong>
+          <span> <%=@user_by_id.username %> </span>
+        </p>
+     
+
+        <p>
+            <strong>First Name:</strong>
+            <span> <%= @user_by_id.firstname %> </span>
+        </p>
+        <p>
+            <strong>Last Name:</strong>
+            <span> <%=@user_by_id.lastname %></span>
+        </p>
+        <p>
+            <strong>Email:</strong>
+            <span> <%=@user_by_id.email%> </span>
+        </p>
+        <p>
+            <strong>Gender:</strong>
+            <span> <%=@user_by_id.gender %> </span>
+        </p>
+
+        <p>
+            <strong> Post History: </strong>
+            <span id="infobox"><%=@user_by_id.posts.count %></span>
+        </p>
+
+        <p>
+            <strong> Comment History: </strong>
+            <span id="infobox"><%=@user_by_id.comments.count %></span>
+        </p>
+    </div>
+    <!-- Needed because other elements inside ProfilePage have floats -->
+    <div style="clear:both"></div>
+</div>
+
+</div>
+
+
+
