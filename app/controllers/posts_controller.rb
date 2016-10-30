@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-	def show 
+	def index 
 		@posts = Post.all
 		@post = Post.new
 	end
@@ -8,17 +8,21 @@ class PostsController < ApplicationController
 	def new
 		@post = Post.new(post_params)
 		if @post.save
-	# @post_new =	Post.create(topic: params[:topic], content: params[:content], user_id: current_user.id)
-	redirect_to '/posts'
-else 
-	redirect_to '/users'
+			redirect_to '/posts'
+		else 
+			redirect_to '/users'
 	
 	end
 end
+
 private
 def post_params
 	params.require(:post).permit(:topic, :content, :user_id)
 end
 
+
+	def show 
+
+	end
 
 end

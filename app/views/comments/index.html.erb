@@ -1,0 +1,10 @@
+
+<ul>
+<% @comments.each do |comment| %>
+
+<span>Post topic: <%= @post.topic %> Author: <%= @author.firstname %> <%= @author.lastname%></span>
+<li><%= comment.content%></li>
+<% end %>
+
+
+</ul>

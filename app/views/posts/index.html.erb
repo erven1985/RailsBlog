@@ -1,0 +1,22 @@
+
+<div class="new_post">
+	<%= form_for @post do |f| %> 
+<div class="field">
+	<%= f.label :topic %><br />
+	<%= f.text_field :topic %><br />
+	<%= f.label :content %><br />
+	<%= f.text_area :content, size: "60x12" %><br />
+	<%= f.hidden_field :user_id, value: current_user.id %>
+</div>
+    <%= f.submit "New Post"%>
+	<% end%>
+</div>	
+<div class="posts">
+<ul>
+	<% @posts.each do |post| %>
+	<span><%=post.topic %></span>
+	<li><%= post.content %> <%= post.user.username %><button class="button30" id='<%= post.id%>' onclick='location.href= "/comments/new/<%= post.id%>"'></button></li><br />
+	<span>comments: <a class="post_link" href="/comments/<%=post.id%>"><%=post.comments.count %></a></span><br />
+	<% end %>
+</ul>	
+</div>

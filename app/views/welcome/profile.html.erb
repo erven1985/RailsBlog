@@ -33,12 +33,12 @@
 
         <p>
             <strong> Post History: </strong>
-            <span id="infobox"><%=@user.posts.count %></span>
+            <span id="infobox"><a href='/posts/<%= @user.id%>'><%=@user.posts.count %></a></span>
         </p>
 
         <p>
             <strong> Comment History: </strong>
-            <span id="infobox"><%=@user.comments.count %></span>
+            <span id="infobox"><a href="/comments/user/<%=@user.id%>"><%=@user.comments.count %></a></span>
         </p>
     </div>
 

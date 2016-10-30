@@ -14,10 +14,10 @@
        <% if user_signed_in? %>
     <nav id="navbar">
             <ul>
-              <li><%= link_to "Home",    '/' %></li>
-              <li><%= link_to "Posts",    '/posts' %></li>
-              <li><%= link_to "Users",    '/users' %></li>
-              <li><%= link_to "Profile",  '/users/profile' %></li>
+              <li><%= link_to "Home",    '/', id:"erven1" %></li>
+              <li><%= link_to "Posts",    '/posts', id:"erven2"  %></li>
+              <li><%= link_to "Users",    '/users', id:"erven3"  %></li>
+              <li><%= link_to "Profile",  '/users/profile', id:"erven4" %></li>
             </ul>
     <span id="greeting">Welcome, <%= current_user.username %></span>
     <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, id: "navso" %>

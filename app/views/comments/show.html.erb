@@ -1,6 +1,6 @@
-<div class="posts_my">
+<div class="comments_my">
 <ul>
-	<% Post.where(user_id: params[:id]).each do |post| %>
+	<% Comment.where(user_id: params[:id]).each do |post| %>
 	<span><%=post.topic %></span>
 	<li><%=post.content %></li><br />
 

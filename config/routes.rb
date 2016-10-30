@@ -7,11 +7,18 @@ Rails.application.routes.draw do
   get 'welcome/index', as: 'user_root'
   get '/users'           		 => 'welcome#all'
   get 'users/profile' 			 => 'welcome#profile'
-  get 'users/update'				 => 'welcome#update'
   get '/users/profile/:id'   => 'welcome#show'
 
 
-	get '/posts'           => 'posts#show'
-	post '/posts'          => 'posts#new'
+	get '/posts'               => 'posts#index'
+	post '/posts'              => 'posts#new'
+  get '/posts/:id'           => 'posts#show' 
+
+
+
+  get '/comments/:id'        => 'comments#index'
+  get '/comments/new/:id'    => 'comments#new'
+  post '/comments/new/:id'   => 'comments#new'
+  get 'comments/user/:id'    => 'comments#show'
 
 end

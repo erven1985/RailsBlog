@@ -25,6 +25,7 @@ margin-top: 200px;
 }
 
 
+
 #navbar {
 	background-color: white;
 	position: fixed;
@@ -39,7 +40,7 @@ margin-top: 200px;
 #navbar li  {
 	float: left;
 	display: inline-block;
-	margin: 10px 80px;
+	margin: 10px 90px;
 	font-family: 'Lato', sans-serif; 
 
 }
@@ -47,7 +48,7 @@ margin-top: 200px;
 #navso  {
 	float: left;
 	display: inline-block;
-	margin: 5px 80px;
+	margin: 10px 90px;
 	font-family: 'Lato', sans-serif; 
 }
 
@@ -57,11 +58,17 @@ margin-top: 200px;
   cursor: pointer;
 }
 
-a {
+#erven1, #erven2, #erven3, #erven4, #navso, #navsi, #navso_else {
 	text-decoration: none;
 	outline: none;
 	color: #3554a3;
 	font-weight: 500;
+}
+
+a {
+	color: white;
+	outline: none;
+	text-decoration: none;
 }
 
 #navbar li a:hover {
