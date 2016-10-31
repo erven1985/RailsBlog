@@ -1,7 +1,7 @@
 <div id='ProfilePagestyle'>
 <div id="ProfilePage">
     <div id="LeftCol">
-        <div id="Photo"></div>
+        <div id="Photo"><%= image_tag @user.avatar.url(:thumb) %></div>
         <div id="ProfileOptions">
         <%=@user.username%>
         </div>
