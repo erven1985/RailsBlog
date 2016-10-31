@@ -1,9 +1,9 @@
 
 <div class="comments_all">
+<span>Post topic: <%= @post.topic %></span><br />
+<span> Author: <%= @author.firstname %> <%= @author.lastname%></span>
 <ul>
 <% @comments.each do |comment| %>
-
-<span>Post topic: <%= @post.topic %> Author: <%= @author.firstname %> <%= @author.lastname%></span>
 <li><%= comment.content%></li>
 <% end %>
 

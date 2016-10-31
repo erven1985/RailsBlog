@@ -25,5 +25,5 @@ Rails.application.routes.draw do
   post '/comments/new/:id'   => 'comments#create'
   get 'comments/user/:id'    => 'comments#show'
 
-
+  resources :comments
 end

@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 
+before_action :authenticate_user!
 def index 
 	@post = Post.find(params[:id])
 	@author = User.find(@post.user_id)
@@ -9,7 +10,7 @@ end
 def new
 	@post = Post.find(params[:id])
 	@user = current_user
-	@comment = Comment.new
+	@comment = @post.comments.build
 end
 
 def create

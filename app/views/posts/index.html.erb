@@ -16,7 +16,12 @@
 	<% @posts.each do |post| %>
 	<span><%=post.topic %></span>
 	<li><%= post.content %> <%= post.user.username %><button class="button30" id='<%= post.id%>' onclick='location.href= "/comments/new/<%= post.id%>"'></button></li><br />
-	<span>comments: <a class="post_link" href="/comments/<%=post.id%>"><%=post.comments.count %></a></span><br />
+	<span>comments: <%=post.comments.count%></span><br />
+	<span>
+		<% post.comments.each do |comment| %>
+	<p><%=comment.content %></p><br />
+	<% end %>
+	</span><br />
 	<% end %>
 </ul>	
 </div>

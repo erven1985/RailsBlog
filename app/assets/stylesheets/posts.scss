@@ -10,8 +10,9 @@ color: white;
 }
 
 .new_post {
-
-	margin-top: 100px;
+position:relative;
+top:30px;  
+right:200px	
 }
 
 .button30 {
@@ -25,8 +26,8 @@ color: white;
   background: rgb(245,245,245) linear-gradient(rgb(245,245,245), rgb(188,192,193)) 50% 50% / calc(1.5em + .5em*2) calc(1.5em + .5em*2);
  	outline: none;
   cursor: pointer;
-  margin-right: 100px;
-  float: right;
+  position:absolute;
+  right: 180px;
   box-shadow:
    inset 0 -3px 10px rgba(255,255,255,1),
    inset 0 3px 10px rgba(0,0,0,.4),
@@ -43,5 +44,7 @@ color: white;
 
 .posts_my {
   color: white;
-  margin-top: 100px;
+  left: 400px;
+  top: 100px;
+  position:absolute;
 }
