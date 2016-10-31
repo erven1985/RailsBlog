@@ -1,8 +1,7 @@
 <div class="comments_my">
 <ul>
-	<% Comment.where(user_id: params[:id]).each do |post| %>
-	<span><%=post.topic %></span>
-	<li><%=post.content %></li><br />
+	<% Comment.where(user_id: params[:id]).each do |comment| %>
+	<li><%=comment.content %></li><br />
 
 	<% end %>
 </ul>	

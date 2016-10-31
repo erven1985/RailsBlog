@@ -10,15 +10,20 @@ Rails.application.routes.draw do
   get '/users/profile/:id'   => 'welcome#show'
 
 
-	get '/posts'               => 'posts#index'
-	post '/posts'              => 'posts#new'
-  get '/posts/:id'           => 'posts#show' 
+	get '/posts'               => 'posts#index', as: 'posts'
+	post '/posts'              => 'posts#new',   as: 'new_post'
+  get '/posts/:id'           => 'posts#show'  
+  get '/posts/update/:id'    => 'posts#edit',  as: 'edit_post'
+  put '/posts/update/:id'    => 'posts#update'
+  patch '/posts/update/:id'  => 'posts#update'
+  delete '/posts/update/:id' => 'posts#delete'
 
 
 
   get '/comments/:id'        => 'comments#index'
   get '/comments/new/:id'    => 'comments#new'
-  post '/comments/new/:id'   => 'comments#new'
+  post '/comments/new/:id'   => 'comments#create'
   get 'comments/user/:id'    => 'comments#show'
+
 
 end

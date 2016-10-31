@@ -9,7 +9,15 @@ end
 def new
 	@post = Post.find(params[:id])
 	@user = current_user
+	@comment = Comment.new
+end
+
+def create
 	@comment = Comment.new(comment_params)
+	@comment.save
+	if @comment.save
+		redirect_to posts_path(@post)
+	end
 end
 
 private
