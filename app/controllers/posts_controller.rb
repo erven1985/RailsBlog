@@ -13,44 +13,55 @@ class PostsController < ApplicationController
 		else 
 			redirect_to '/users'
 	
+		end
 	end
-end
+
+
+	def show 
+	end
+
+	# show form to update a specific user's specific post
+	def edit 
+		@post = Post.find(params[:post_id])
+		puts "THIS IS THE FOUND POST:"
+		puts @post
+
+		@user = current_user.id
+	end
+
+
+	# receive data from the Edit form 
+	# update post in DB 
+	def update
+    @post = Post.find(params[:post_id])    
+
+    @post.update({
+      topic: params[:post][:topic],
+      content: params[:post][:content],
+      user_id: params[:post][:user_id]
+    })
+
+
+    if (@post)
+      redirect_to url_for(:controller => :posts, :action => :index)
+    else
+      redirect_to url_for(:controller => :posts, :action => :edit)
+    end
+	end	
+
+
+	def destroy
+	  @post = Post.find(params[:post_id])
+	  @post.destroy
+	  redirect_to url_for(:controller => :posts, :action => :index)
+	end
+
 
 private
+
 def post_params
 	params.require(:post).permit(:topic, :content, :user_id)
 end
 
-
-	def show 
-
-	end
-
-	def edit 
-		@post = Post.find(params[:id])
-	end
-
-	def update
-    @post = Post.find(params[:id])
-    @post.update({
-      topic: params[:post][:topic],
-      price: params[:post][:content],
-      user_id: params[:post][:user_id]
-    })
-    if (@post)
-      redirect_to url_for(:controller => :posts, :action => :show)
-    else
-      redirect_to url_for(:controller => :posts, :action => :edit)
-    end
-end	
-
-
-  def destroy
-    Post.delete(params[:id])
-    @comments = Comment.where(post_id:params[:id])
-    @comments.delete
-    redirect_to url_for(:controller => :posts, :action => :show)
-  end
-
-
+ 
 end

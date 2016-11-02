@@ -1,8 +1,8 @@
 <div class="comments_my">
 <ul>
-	<% Comment.where(user_id: params[:id]).each do |comment| %>
+	<% @comments.each do |comment| %>
 	<li><%=comment.content %></li><br />
-
+	<%=link_to 'Edit', edit_comment_path() %><br />
 	<% end %>
 </ul>	
 </div>

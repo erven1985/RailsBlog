@@ -10,6 +10,7 @@ class WelcomeController < ApplicationController
 
   def profile
     @user = current_user
+    @post = Post.find(@user)
   end
 
   def show 

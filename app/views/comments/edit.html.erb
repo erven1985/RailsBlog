@@ -1,0 +1,11 @@
+
+<div class="edit_comment">
+	<%= form_for :comment, method: :patch do |f| %>
+	  <%= f.hidden_field :username, value: current_user.username %> <br>
+	  <%= f.label :content %>
+	  <%= f.text_area :content, size: "60x12" %> <br>
+	  <%= f.hidden_field :user_id, value: current_user.id %> <br>
+	  <%= f.hidden_field :post_id, value: @comment.post.id %> <br>
+	  <%= f.submit "Update" %>
+	<% end %>
+</div>

@@ -1,8 +1,11 @@
-<%= form_for @post do |f| %>
-  <%= f.label :topic %>
-  <%= f.text_field :topic %> <br>
-  <%= f.label :content %>
-  <%= f.text_area :content, size: "60x12" %> <br>
-  <%= f.hidden_field :user_id, value: @post.user_id %> <br>
-  <%= f.submit "Update"%>
-<% end %>
+
+<div class="edit_form">
+	<%= form_for @post do |f| %>
+	  <%= f.label :topic %>
+	  <%= f.text_field :topic %> <br>
+	  <%= f.label :content %>
+	  <%= f.text_area :content, size: "60x12" %> <br>
+	  <%= f.hidden_field :user_id, value: current_user.id %> <br>
+	  <%= f.submit "Update" %>
+	<% end %>
+</div>

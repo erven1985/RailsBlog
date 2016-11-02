@@ -21,14 +21,42 @@ def create
 	end
 end
 
+def show
+	@comments = Comment.where(user_id: params[:id])
+end
+
+def edit 
+	@comment = Comment.find(params[:comment_id])
+
+end
+
+def update
+    @comment = Comment.find(params[:comment_id])    
+
+    @comment.update({
+      username: params[:comment][:username],
+      content: params[:comment][:content],
+      user_id: params[:comment][:user_id],
+      post_id: params[:comment][:post_id]
+    })
+
+
+    if (@post)
+      redirect_to url_for(:controller => :comments, :action => :show)
+    else
+      redirect_to url_for(:controller => :comments, :action => :index)
+    end
+	end	
+
+
+
+
 private
 def comment_params
 	params.require(:comment).permit(:username, :content, :user_id, :post_id)
 	end
 
-def show
-	
-end
+
 
 
 end

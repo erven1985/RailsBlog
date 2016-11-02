@@ -7,6 +7,9 @@ body {
 	margin: 0px;
  	position:relative;
 	background-color:#3554a3;
+	font-family: 'Lato', sans-serif; 
+	
+
 	}
 
 
@@ -112,22 +115,38 @@ p {
   
 }
 
+#ProfileOptions {
+	text-transform:uppercase;
+	margin-top:20px;
+}
 
- .button {
-    position: relative;
-    right: 10px;
-    background-color: #4CAF50; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    
-
+.button {
+  margin-top: 15px;
+  display: inline-block;
+  background-color:#E74C3C;
+  border-color:#E74C3C;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  padding: .5em 2em .55em;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  -webkit-border-radius: .5em; 
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+.button:active {
+  position: relative;
+  top: 1px;
 }
 
 
@@ -135,7 +154,7 @@ p {
     /* Move it off the top of the page, then centre it horizontally */
     position: absolute;
     left: 290px;
-    margin: 250px auto;
+    margin: 200px auto;
     width: 635px;
     padding: 30px 30px;
     color: white;
@@ -198,6 +217,7 @@ p {
     /* Give it a width */
     display: inline-block;
     width: 100px;
+    margin-top: 5px;
 
 }
 
@@ -206,7 +226,7 @@ p {
     /* Give it a width */
     display: inline-block;
     width: 250px;
-    color: #350866;
+    color: #3554a3;
     text-shadow: 0 0 10px white;
     text-transform: uppercase;
     text-shadow: 0 0 10px white;
@@ -248,12 +268,40 @@ p {
 
 position:absolute;
 color: white;
-top: 180px;
-left:600px;
+top: 100px;
+left:450px;
 
+}
+
+.users img:hover {
+	opacity: 0.7;
 }
 
 .link_user {
 	color: white;
 }
 
+#allusers {
+	text-transform: uppercase;
+	margin-left:30px;
+	color:#F2CF66
+
+}
+
+.list {
+	text-transform:uppercase;
+}
+
+.users li {
+	display:inline-block;
+	margin-top:30px;
+}
+
+.infobox a { 
+color: #3554a3;
+text-decoration:none;
+}
+
+.infobox a:hover {
+	font-size: 20px;
+}
