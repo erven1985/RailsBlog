@@ -1,0 +1,15 @@
+
+<div class="users">
+<h1 id="allusers">All Users</h1>
+<ul class="list">
+	<% @users.each do |user| %>
+	<li>
+			<a class="link_user" href="/users/profile/<%= user.id%>">
+			<%= image_tag user.avatar.url(:thumb) %><br />
+			</a>
+			<%= user.username %> 
+	</li><br />
+
+	<% end %>
+</ul>	
+</div>

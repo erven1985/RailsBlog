@@ -1,4 +1,20 @@
 class WelcomeController < ApplicationController
-  def profile
+  
+  def index
+
   end
+ 
+	def all
+  	@users = User.all
+	end
+
+  def profile
+    @user = current_user
+    @post = Post.find(@user)
+  end
+
+  def show 
+    @user_by_id = User.find(params[:id])
+  end
+
 end

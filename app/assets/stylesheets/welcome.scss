@@ -3,11 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {  
 	width:100%;  
-	height:100%; 
+	min-height:750px; 
 	margin: 0px;
- 	position:fixed;
+ 	position:relative;
 	background-color:#3554a3;
+	font-family: 'Lato', sans-serif; 
+	
+
 	}
+
 
 .content { 
  position: 
@@ -57,7 +61,7 @@ p {
 	float:left;  
 	margin:0;}
 
-ul {  
+#home_name {  
 	margin-top:0;  
 	padding-left:110px;  
 	text-align:left;  
@@ -70,7 +74,7 @@ ul {
 	animation-iteration-count: infinite;
 }
 
-ul li {  
+#home_name li {  
 	line-height:40px;  
 	margin:0;}
 	@-webkit-keyframes opacity 
@@ -102,3 +106,202 @@ ul li {
 		transform:translateY(-25%);
 		}
 	}
+
+#ProfilePagestyle{
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  margin: 0;
+  
+}
+
+#ProfileOptions {
+	text-transform:uppercase;
+	margin-top:20px;
+}
+
+.button {
+  margin-top: 15px;
+  display: inline-block;
+  background-color:#E74C3C;
+  border-color:#E74C3C;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  padding: .5em 2em .55em;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  -webkit-border-radius: .5em; 
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+.button:active {
+  position: relative;
+  top: 1px;
+}
+
+
+#ProfilePage {
+    /* Move it off the top of the page, then centre it horizontally */
+    position: absolute;
+    left: 290px;
+    margin: 200px auto;
+    width: 635px;
+    padding: 30px 30px;
+    color: white;
+    text-shadow: 0 0 10px black;
+    background-color: rgba(255,255,255, 0.5);
+    
+
+}
+
+
+#LeftCol
+{
+    /* Move it to the left */
+    float: left;
+
+    width: 200px;
+    text-align: center;
+
+    /* Move it away from the content */
+    margin-right: 20px;
+
+}
+
+#Photo
+{
+    
+   
+    /* Width and height of photo container */
+    width: 200px;
+    height: 200px;
+
+}
+
+
+#Photo2 {
+    /* Width and height of photo container */
+    width: 200px;
+    height: 200px;
+}
+#PhotoOptions
+{
+    text-align: center;
+    width: 200px;
+
+}
+
+#Info
+{
+    width: 400px;
+    text-align: left;
+    font-size: 17px;
+    /* Move it to the right */
+    float: right;
+    font-weight: bold;
+}
+
+
+#Info strong
+{
+    /* Give it a width */
+    display: inline-block;
+    width: 100px;
+    margin-top: 5px;
+
+}
+
+#Info span
+{
+    /* Give it a width */
+    display: inline-block;
+    width: 250px;
+    color: #3554a3;
+    text-shadow: 0 0 10px white;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px white;
+
+
+}
+
+
+
+ #regfname, #regemail, #regpas, #regun, #regdob {
+	width: 220px;
+	height: 20px;
+	outline: none;
+	text-align: center;
+	border: 1px solid #bbb;      
+	text-transform:uppercase;
+}
+
+#regemail {
+	margin-left: 25px;
+}
+
+#regun {
+	margin-left: -2px;
+}
+
+
+#regpas {
+	margin-right: 0px;
+}
+
+#regdob {
+	margin-left: 35px;
+}
+
+// Users Page 
+
+.users {
+
+position:absolute;
+color: white;
+top: 100px;
+left:450px;
+
+}
+
+.users img:hover {
+	opacity: 0.7;
+}
+
+.link_user {
+	color: white;
+}
+
+#allusers {
+	text-transform: uppercase;
+	margin-left:30px;
+	color:#F2CF66
+
+}
+
+.list {
+	text-transform:uppercase;
+}
+
+.users li {
+	display:inline-block;
+	margin-top:30px;
+}
+
+.infobox a { 
+color: #3554a3;
+text-decoration:none;
+}
+
+.infobox a:hover {
+	font-size: 20px;
+}

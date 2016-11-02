@@ -1,0 +1,8 @@
+<div class="comments_my">
+<ul>
+	<% @comments.each do |comment| %>
+	<li><%=comment.content %></li><br />
+	<%=link_to 'Edit', edit_comment_path() %><br />
+	<% end %>
+</ul>	
+</div>

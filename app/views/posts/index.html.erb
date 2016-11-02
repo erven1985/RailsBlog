@@ -1,0 +1,30 @@
+
+<div class="new_post">
+	<%= form_for @post do |f| %> 
+<div class="field">
+	<%= f.label :topic %><br />
+	<%= f.text_field :topic, id: "post_index" %><br />
+	<%= f.label :content %><br />
+	<%= f.text_area :content, size: "60x12", id: "post_text_area" %><br />
+	<%= f.hidden_field :user_id, value: current_user.id %>
+</div>
+    <%= f.submit "New Post", id: "newpost_button"%>
+	<% end%>
+</div>	
+<div class="posts">
+<ul>
+	<% @posts.each do |post| %>
+	<span class="topic">Topic: <%=post.topic %></span><br />
+	<span class="author">Author: <%= post.user.username %></span>
+	<li class="post_content"><%= post.content %> 
+	<!-- <button class="button30" id='<%= post.id%>' onclick='location.href= "/comments/<%= post.id%>/new"'></button></li><br /> -->
+	<%= link_to "", new_comment_path(post.id) , :class => "button30" %><br />
+	<span class="number">comments: <%=post.comments.count%></span><br />
+	<span class="posts_comments">
+		<% post.comments.each do |comment| %>
+	<p><%=comment.content %></p><br />
+	<% end %>
+	</span><br />
+	<% end %>
+</ul>	
+</div>

@@ -1,7 +1,7 @@
 <div id='ProfilePagestyle'>
 <div id="ProfilePage">
     <div id="LeftCol">
-        <div id="Photo"></div>
+        <div id="Photo"><%= image_tag @user.avatar.url(:thumb) %></div>
         <div id="ProfileOptions">
         <%=@user.username%>
         </div>
@@ -31,14 +31,19 @@
             <span> <%=@user.gender %> </span>
         </p>
 
-            <p>
+        <p>
+            <strong> Post History: </strong>
+            <span class="infobox"><a href='/users/<%=@user.id%>/posts'><%=@user.posts.count %></a></span>
+        </p>
+
+        <p>
             <strong> Comment History: </strong>
-            <span id="infobox"></span>
-            </p>
+            <span class="infobox"><a href="/comments/<%=@user.id%>ef22"><%=@user.comments.count %></a></span>
+        </p>
     </div>
 
 <button  onclick="location.href='/users/edit'" class="button">Change Password</button>
-<button  onclick="location.href='/users/update'" class="button">Update Info</button>
+
     <!-- Needed because other elements inside ProfilePage have floats -->
     <div style="clear:both"></div>
 </div>
