@@ -31,15 +31,15 @@ Rails.application.routes.draw do
   # delete specific user's specific post
   delete '/users/:post_id/posts'            => 'posts#destroy', as: 'destroy_post'
 
-  
 
   # COMMENTS ROUTES
   get '/comments/:id'                       => 'comments#index'
   get '/comments/new/:id'                   => 'comments#new', as: "new_comment"
   post '/comments/new/:id'                  => 'comments#create'
-  get 'comments/:id'                        => 'comments#show'
-  get '/comments/:comment_id/edit'                  => 'comments#edit',  as: 'edit_comment'
-  patch '/comments/:comment_id'             => 'comments#update', as: 'update_comment' 
-  put '/comments/:comment_id'               => 'comments#update' 
+  get 'comments/:id'                        => 'comments#show', as: "comments"
+  get '/comments/:id/edit'                  => 'comments#edit',  as: 'edit_comment'
+  patch '/comments/:id/edit'                => 'comments#update', as: 'update_comment' 
+  put '/comments/:id'                       => 'comments#update' 
+  delete '/comments/:id'                    => 'comments#destroy', as: 'destroy_comment'
 
 end
