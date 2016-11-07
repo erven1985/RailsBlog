@@ -17,21 +17,68 @@
 }
 
 .new_comment {
-	top:100px;
-	left:200px;
+	top:150px;
+	left:410px;
 	color:white;
 	position: absolute;
-
 }
 
-h3 {
-	position: relative;
-	top:30px;
-	left: 300px;
+
+
+#text_com {
+	border-radius: 10px;
 }
 
 .edit_comment {
 	position: absolute;
 	top: 100px;
 	left: 400px;
+}
+
+#new_comment {
+	position: relative;
+
+}
+
+
+#newcom1 {
+  margin-top: 15px;
+  display: inline-block;
+  background-color:#E74C3C;
+  border-color:#E74C3C;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  padding: .5em 2em .55em;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  -webkit-border-radius: .5em; 
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+#newcom1:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+#newcom1:active {
+  position: relative;
+  top: 1px;
+}
+
+.comments_all li {
+position:relative;
+top:50px;
+left: 400px;
+}
+
+.comments_all a {
+  position:relative;
+  top:40px;
+  left: 700px;
+  color: white;
 }
