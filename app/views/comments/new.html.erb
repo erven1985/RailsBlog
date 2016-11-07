@@ -1,14 +1,14 @@
 
 <div class="new_comment">
-<h3>Leave your comment!</h3>
+<h3 id="new_comment">Leave your comment!</h3>
 	<%= form_for :comment do |f| %> 
 <div class="field">
 	<%= f.hidden_field :username, value: @user.username %>
 	<%= f.label :text %><br />
-	<%= f.text_area :content, size: "60x12" %><br />
+	<%= f.text_area :content, size: "60x12", id: "text_com" %><br />
 	<%= f.hidden_field :user_id, value: @user.id %>
 	<%= f.hidden_field :post_id, value: @post.id %>
 </div>
-    <%= f.submit "New Comment"%>
+    <%= f.submit "New Comment", id: "newcom1" %>
 	<% end%>
 </div>
